@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Factorial</title>
+</head>
+<body>
+<script>
+    // تعریف تابع برای محاسبه فاکتوریل
+    function calculateFactorial(number) {
+        if (number === 0 || number === 1) {
+            return 1;
+        }
+        return number * calculateFactorial(number - 1);
+    }
+
+    // درخواست ورودی از کاربر
+    const inputNumber = prompt("لطفاً یک عدد وارد کنید: ");
+    const number = parseInt(inputNumber);
+
+    // بررسی و واکشی نتیجه
+
+    if (!isNaN(number)) {
+        if (number < 0) {
+            console.log("عدد وارد شده منفی است. فاکتوریل وجود ندارد.");
+        } else {
+            const factorial = calculateFactorial(number);
+            console.log(`${number}! = ${factorial}`);
+
+        }
+    } else {
+        console.log("ورودی نامعتبر. لطفاً یک عدد صحیح وارد کنید.");
+    }
+
+</script>
+</body>
+</html>

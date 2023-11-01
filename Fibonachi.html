@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibonachi</title>
+</head>
+<body>
+<script>
+    function fibonacci(n) {
+        if (n <= 0) {
+            return 0;
+        } else if (n === 1) {
+            return 1;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+    }
+
+    const n = parseInt(prompt("عدد مورد نظر را وارد کنید:"));
+    const result = fibonacci(n);
+    console.log(`تعداد فیبوناچی برای عدد ${n} برابر با ${result} است.`);
+
+</script>
+</body>
+</html>
